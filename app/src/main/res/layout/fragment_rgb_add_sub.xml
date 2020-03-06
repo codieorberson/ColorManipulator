@@ -39,9 +39,10 @@
             android:id="@+id/rgbseekbar1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#FF0800"
-            android:thumbTint="#FF0800"/>
+            android:thumbTint="#FF0800"
+            android:progress="187"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,9 +52,10 @@
             android:id="@+id/rgbseekbar4"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#FF0800"
-            android:thumbTint="#FF0800"/>
+            android:thumbTint="#FF0800"
+            android:progress="68"/>
     </TableRow>
 
     <TableRow>
@@ -71,9 +73,10 @@
             android:id="@+id/rgbseekbar2"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#00ff00"
-            android:thumbTint="#00ff00"/>
+            android:thumbTint="#00ff00"
+            android:progress="34"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -83,9 +86,10 @@
             android:id="@+id/rgbseekbar5"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#00ff00"
-            android:thumbTint="#00ff00"/>
+            android:thumbTint="#00ff00"
+            android:progress="221"/>
     </TableRow>
 
     <TableRow>
@@ -103,9 +107,10 @@
             android:id="@+id/rgbseekbar3"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#0083ff"
-            android:thumbTint="#0083ff"/>
+            android:thumbTint="#0083ff"
+            android:progress="187"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -115,9 +120,10 @@
             android:id="@+id/rgbseekbar6"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
+            android:max="255"
             android:progressTint="#0083ff"
-            android:thumbTint="#0083ff"/>
+            android:thumbTint="#0083ff"
+            android:progress="68"/>
     </TableRow>
 
 </TableLayout>

@@ -41,7 +41,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#0FF"
-            android:thumbTint="#0FF"/>
+            android:thumbTint="#0FF"
+            android:progress="100"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,7 +54,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#0FF"
-            android:thumbTint="#0FF"/>
+            android:thumbTint="#0FF"
+            android:progress="100"/>
     </TableRow>
 
     <TableRow>
@@ -73,7 +75,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#ebb0d7"
-            android:thumbTint="#ebb0d7"/>
+            android:thumbTint="#ebb0d7"
+            android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +88,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#ebb0d7"
-            android:thumbTint="#ebb0d7"/>
+            android:thumbTint="#ebb0d7"
+            android:progress="0"/>
     </TableRow>
 
     <TableRow>
@@ -105,7 +109,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#fff000"
-            android:thumbTint="#fff000"/>
+            android:thumbTint="#fff000"
+            android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,7 +122,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#fff000"
-            android:thumbTint="#fff000"/>
+            android:thumbTint="#fff000"
+            android:progress="0"/>
     </TableRow>
 
     <TableRow>
@@ -136,7 +142,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#080808"
-            android:thumbTint="#080808"/>
+            android:thumbTint="#080808"
+            android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -148,7 +155,8 @@
             android:layout_weight="1"
             android:max="100"
             android:progressTint="#080808"
-            android:thumbTint="#080808"/>
+            android:thumbTint="#080808"
+            android:progress="0"/>
     </TableRow>
 
 </TableLayout>
