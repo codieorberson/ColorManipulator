@@ -1,17 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".rgb_manipulation">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="rgb_manip"
-        android:textSize="35sp"
-        android:layout_centerInParent="true"
-        android:gravity="center"/>
+    <TableRow>
+    <View
+        android:layout_height="50dp"></View>
+</TableRow>
 
-</RelativeLayout>
+    <TableRow>
+        <View android:id="@+id/box1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#00ffff"
+            android:visibility="visible"/>
+
+        <View android:id="@+id/box2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#00ffff"
+            android:visibility="visible"/>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="   R"
+            android:textColor="#FF0800"/>
+        <SeekBar
+            android:id="@+id/rgbseekbar1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#FF0800"
+            android:thumbTint="#FF0800"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="R"
+            android:textColor="#FF0800" />
+        <SeekBar
+            android:id="@+id/rgbseekbar4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#FF0800"
+            android:thumbTint="#FF0800"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView>
+        </TextView>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="  G"
+            android:textColor="#00ff00"/>
+        <SeekBar
+            android:id="@+id/rgbseekbar2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#00ff00"
+            android:thumbTint="#00ff00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="G"
+            android:textColor="#00ff00" />
+        <SeekBar
+            android:id="@+id/rgbseekbar5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#00ff00"
+            android:thumbTint="#00ff00"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView>
+        </TextView>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="   B"
+            android:textColor="#0083ff"/>
+        <SeekBar
+            android:id="@+id/rgbseekbar3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#0083ff"
+            android:thumbTint="#0083ff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="B"
+            android:textColor="#0083ff" />
+        <SeekBar
+            android:id="@+id/rgbseekbar6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressTint="#0083ff"
+            android:thumbTint="#0083ff"/>
+    </TableRow>
+
+</TableLayout>
