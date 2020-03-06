@@ -16,8 +16,4 @@ class rgb_manipulation : Fragment() {
         return inflater.inflate(R.layout.fragment_rgb_manipulation, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        rgb_manipulation.text = "RGB Manip"
-    }
-
 }

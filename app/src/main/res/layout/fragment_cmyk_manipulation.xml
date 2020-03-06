@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cmyk_manipulation">
+    tools:context=".rgb_manipulation">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/cmyk_manipulation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@+string/cmyk_manip" />
+        android:layout_height="wrap_content"
+        android:text="rgb_manip"
+        android:textSize="35sp"
+        android:layout_centerInParent="true"
+        android:gravity="center"/>
 
-</FrameLayout>
+</RelativeLayout>

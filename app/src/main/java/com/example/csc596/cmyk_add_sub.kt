@@ -16,8 +16,5 @@ class cmyk_add_sub : Fragment() {
         return inflater.inflate(R.layout.fragment_cmyk_add_sub, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        cmyk_add_sub.text = "CMYK Add/Sub"
-    }
 
 }

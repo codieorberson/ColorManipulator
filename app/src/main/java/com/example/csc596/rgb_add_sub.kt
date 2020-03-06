@@ -16,8 +16,4 @@ class rgb_add_sub : Fragment() {
         return inflater.inflate(R.layout.fragment_rgb_add_sub, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        rgb_add_sub.text = "RGB Add/Sub"
-    }
-
 }
