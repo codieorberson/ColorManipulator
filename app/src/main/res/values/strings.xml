@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CSC567FinalProject</string>
+    <string name="rgb_manip">RGB Manip</string>
+    <string name="cmyk_manip">CMYK Manip</string>
+    <string name="rgb_add_subtract">RGB Add/Subtract</string>
+    <string name="cmyk_add_subtract">CMYK Add/Subtract</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
