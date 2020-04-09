@@ -11,7 +11,7 @@
     </TableRow>
 
     <TableRow>
-        <View android:id="@+id/box1"
+        <View android:id="@+id/cmykbox1"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -19,7 +19,7 @@
             android:background="#00ffff"
             android:visibility="visible"/>
 
-        <View android:id="@+id/box2"
+        <View android:id="@+id/cmykbox2"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -132,6 +132,7 @@
     </TableRow>
 
     <TableRow>
+
         <TextView
             android:layout_width="0dp"
             android:text="   K"

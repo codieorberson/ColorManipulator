@@ -11,7 +11,7 @@
 </TableRow>
 
     <TableRow>
-        <View android:id="@+id/box1"
+        <View android:id="@+id/rgbbox1"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -20,7 +20,7 @@
             android:visibility="visible"
             android:progress="60"/>
 
-        <View android:id="@+id/box2"
+        <View android:id="@+id/rgbbox2"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
