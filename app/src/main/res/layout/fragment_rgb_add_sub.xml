@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".rgb_add_sub">
 
+
     <TableRow>
         <View
             android:layout_height="50dp"></View>
     </TableRow>
 
     <TableRow>
-        <View android:id="@+id/box1"
+        <View android:id="@+id/rgb_addorsub_box1"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -19,7 +20,7 @@
             android:background="#BB22BB"
             android:visibility="visible"/>
 
-        <View android:id="@+id/box2"
+        <View android:id="@+id/rgb_addorsub_box2"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -36,7 +37,7 @@
             android:text="   R"
             android:textColor="#FF0800"/>
         <SeekBar
-            android:id="@+id/rgbseekbar1"
+            android:id="@+id/rgb_addsub_seekbar1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
@@ -49,7 +50,7 @@
             android:text="R"
             android:textColor="#FF0800" />
         <SeekBar
-            android:id="@+id/rgbseekbar4"
+            android:id="@+id/rgb_addsub_seekbar4"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
@@ -70,7 +71,7 @@
             android:text="  G"
             android:textColor="#00ff00"/>
         <SeekBar
-            android:id="@+id/rgbseekbar2"
+            android:id="@+id/rgb_addsub_seekbar2"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
@@ -83,7 +84,7 @@
             android:text="G"
             android:textColor="#00ff00" />
         <SeekBar
-            android:id="@+id/rgbseekbar5"
+            android:id="@+id/rgb_addsub_seekbar5"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
@@ -104,7 +105,7 @@
             android:text="   B"
             android:textColor="#0083ff"/>
         <SeekBar
-            android:id="@+id/rgbseekbar3"
+            android:id="@+id/rgb_addsub_seekbar3"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
@@ -117,7 +118,7 @@
             android:text="B"
             android:textColor="#0083ff" />
         <SeekBar
-            android:id="@+id/rgbseekbar6"
+            android:id="@+id/rgb_addsub_seekbar6"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:max="255"
