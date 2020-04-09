@@ -42,8 +42,6 @@ class rgb_manipulation : Fragment() {
             }
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
-
-                box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
         })
 
@@ -61,7 +59,6 @@ class rgb_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
 
-                box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
         })
 
@@ -79,7 +76,6 @@ class rgb_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
 
-                box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
         })
 
@@ -95,7 +91,6 @@ class rgb_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
 
-                box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
         })
 
@@ -111,7 +106,6 @@ class rgb_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
 
-                box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
         })
 
@@ -127,7 +121,6 @@ class rgb_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
 
-                box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
         })
 

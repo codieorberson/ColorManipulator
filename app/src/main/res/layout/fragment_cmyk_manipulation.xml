@@ -6,9 +6,9 @@
     tools:context=".cmyk_manipulation">
 
     <TableRow>
-        <View
-            android:layout_height="50dp"></View>
-    </TableRow>
+    <View
+        android:layout_height="50dp"></View>
+</TableRow>
 
     <TableRow>
         <View android:id="@+id/cmykbox1"
@@ -17,7 +17,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#00ffff"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
         <View android:id="@+id/cmykbox2"
             android:layout_width="0dp"
@@ -25,7 +25,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#00ffff"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
     </TableRow>
 
@@ -39,7 +39,6 @@
             android:id="@+id/cmyk_as_seekBar1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#0FF"
             android:thumbTint="#0FF"
             android:progress="100"/>
@@ -49,10 +48,9 @@
             android:text="C"
             android:textColor="#0FF" />
         <SeekBar
-            android:id="@+id/cmyk_as_seekBar4"
+            android:id="@+id/cmyk_as_seekBar5"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#0FF"
             android:thumbTint="#0FF"
             android:progress="100"/>
@@ -73,7 +71,6 @@
             android:id="@+id/cmyk_as_seekBar2"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#ebb0d7"
             android:thumbTint="#ebb0d7"
             android:progress="0"/>
@@ -83,10 +80,9 @@
             android:text="M"
             android:textColor="#ebb0d7" />
         <SeekBar
-            android:id="@+id/cmyk_as_seekBar5"
+            android:id="@+id/cmyk_as_seekBar6"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#ebb0d7"
             android:thumbTint="#ebb0d7"
             android:progress="0"/>
@@ -107,7 +103,6 @@
             android:id="@+id/cmyk_as_seekBar3"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#fff000"
             android:thumbTint="#fff000"
             android:progress="0"/>
@@ -117,10 +112,9 @@
             android:text="Y"
             android:textColor="#fff000" />
         <SeekBar
-            android:id="@+id/cmyk_as_seekBar6"
+            android:id="@+id/cmyk_as_seekBar7"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#fff000"
             android:thumbTint="#fff000"
             android:progress="0"/>
@@ -138,10 +132,9 @@
             android:text="   K"
             android:textColor="#080808"/>
         <SeekBar
-            android:id="@+id/cmyk_as_seekBar7"
+            android:id="@+id/cmyk_as_seekBar4"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#080808"
             android:thumbTint="#080808"
             android:progress="0"/>
@@ -154,7 +147,6 @@
             android:id="@+id/cmyk_as_seekBar8"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:max="100"
             android:progressTint="#080808"
             android:thumbTint="#080808"
             android:progress="0"/>

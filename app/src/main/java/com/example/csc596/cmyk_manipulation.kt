@@ -1,5 +1,8 @@
 package com.example.csc596
 
+import android.graphics.Color
+import android.graphics.Color.rgb
+import android.graphics.ColorSpace
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,6 +34,58 @@ class cmyk_manipulation : Fragment() {
         val box1 = view.findViewById<View>(R.id.cmykbox1)
         val box2 = view.findViewById<View>(R.id.cmykbox2)
 
+        seek1?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar,
+                                           progress: Int, fromUser: Boolean) {
+                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
+        seek2?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar,
+                                           progress: Int, fromUser: Boolean) {
+                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+                // write custom code for progress is stopped
+            }
+        })
+
+        seek3?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar,
+                                           progress: Int, fromUser: Boolean) {
+                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
+        seek4?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar,
+                                           progress: Int, fromUser: Boolean) {
+                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
         return view
     }
 

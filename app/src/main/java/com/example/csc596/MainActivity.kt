@@ -31,16 +31,12 @@ class MainActivity : AppCompatActivity(){
         adapter.addFragment(cmyk_add_sub(), title = " CMYK Add/Sub ")
         view_pager.adapter = adapter
         tabs.setupWithViewPager(view_pager)
-
-
     }
-
 
     class MyViewPagerAdapter(manager:FragmentManager): FragmentPagerAdapter(manager){
 
         private val fragmentList: MutableList<Fragment> = ArrayList()
         private val titleList : MutableList<String> = ArrayList()
-
 
         override fun getCount(): Int {
             return fragmentList.size

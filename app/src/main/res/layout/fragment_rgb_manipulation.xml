@@ -17,8 +17,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#00ffff"
-            android:visibility="visible"
-            android:progress="60"/>
+            android:visibility="visible" />
 
         <View android:id="@+id/rgbbox2"
             android:layout_width="0dp"
@@ -26,8 +25,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#00ffff"
-            android:visibility="visible"
-            android:progress="60"/>
+            android:visibility="visible"/>
 
     </TableRow>
 
