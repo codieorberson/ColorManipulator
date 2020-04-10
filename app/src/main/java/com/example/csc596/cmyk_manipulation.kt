@@ -41,14 +41,13 @@ class cmyk_manipulation : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
                 box1.setBackgroundColor(rgb(red, green, blue))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -59,15 +58,13 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
                 box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -79,16 +76,13 @@ class cmyk_manipulation : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
                 box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -99,16 +93,13 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
                 box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -119,10 +110,7 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
                 box2.setBackgroundColor(rgb(red, green, blue))
             }
 
@@ -139,15 +127,13 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
                 box2.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -158,15 +144,13 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
                 box2.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -177,15 +161,13 @@ class cmyk_manipulation : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
                 box2.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
@@ -193,4 +175,13 @@ class cmyk_manipulation : Fragment() {
         return view
     }
 
+    fun convertCMYKValuesToRGB(seekBars: Array<SeekBar>): Triple<Int, Int, Int> {
+
+        val black: Float = (1 - (seekBars[3].progress.toFloat() / 100))
+        val red: Int = (255 * (1 - (seekBars[0].progress.toFloat() / 100)) * black).toInt()
+        val green: Int = (255 * (1 - (seekBars[1].progress.toFloat() / 100)) * black).toInt()
+        val blue: Int = (255 * (1 - (seekBars[2].progress.toFloat() / 100)) * black).toInt()
+
+        return Triple(red, green, blue)
+    }
 }

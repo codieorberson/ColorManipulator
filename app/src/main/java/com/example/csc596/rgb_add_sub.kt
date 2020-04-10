@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import kotlinx.android.synthetic.main.fragment_rgb_add_sub.*
 
 class rgb_add_sub : Fragment() {
 
@@ -35,9 +34,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
-                seek4.progress = 255 - seek1.progress
-                seek5.progress = 255 - seek2.progress
-                seek6.progress = 255 - seek3.progress
+                update_seekbars_progress(arrayOf(seek4, seek5, seek6, seek1, seek2, seek3))
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
 
@@ -57,9 +54,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
-                seek4.progress = 255 - seek1.progress
-                seek5.progress = 255 - seek2.progress
-                seek6.progress = 255 - seek3.progress
+                update_seekbars_progress(arrayOf(seek4, seek5, seek6, seek1, seek2, seek3))
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
 
@@ -79,9 +74,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
-                seek4.progress = 255 - seek1.progress
-                seek5.progress = 255 - seek2.progress
-                seek6.progress = 255 - seek3.progress
+                update_seekbars_progress(arrayOf(seek4, seek5, seek6, seek1, seek2, seek3))
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
 
@@ -101,9 +94,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
-                seek1.progress = 255 - seek4.progress
-                seek2.progress = 255 - seek5.progress
-                seek3.progress = 255 - seek6.progress
+                update_seekbars_progress(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6))
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
 
@@ -123,9 +114,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
-                seek1.progress = 255 - seek4.progress
-                seek2.progress = 255 - seek5.progress
-                seek3.progress = 255 - seek6.progress
+                update_seekbars_progress(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6))
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
 
@@ -144,9 +133,7 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
-                seek1.progress = 255 - seek4.progress
-                seek2.progress = 255 - seek5.progress
-                seek3.progress = 255 - seek6.progress
+                update_seekbars_progress(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6))
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
 
@@ -160,6 +147,12 @@ class rgb_add_sub : Fragment() {
         })
 
         return view
+    }
+
+    fun update_seekbars_progress(seekBars: Array<SeekBar>) {
+        seekBars[0].progress = 255 - seekBars[3].progress
+        seekBars[1].progress = 255 - seekBars[4].progress
+        seekBars[2].progress = 255 - seekBars[5].progress
     }
 
 }

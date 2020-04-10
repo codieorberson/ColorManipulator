@@ -35,19 +35,18 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-                seek5.progress = 100 - seek1.progress
-                seek6.progress = 100 - seek2.progress
-                seek7.progress = 100 - seek3.progress
-                seek8.progress = 100 - seek4.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
 
-                val black2: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek5, seek6, seek7, seek8, seek1, seek2, seek3, seek4))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek5,
+                        seek6,
+                        seek7,
+                        seek8
+                    )
+                )
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -67,19 +66,18 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-                seek5.progress = 100 - seek1.progress
-                seek6.progress = 100 - seek2.progress
-                seek7.progress = 100 - seek3.progress
-                seek8.progress = 100 - seek4.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
 
-                val black2: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek5, seek6, seek7, seek8, seek1, seek2, seek3, seek4))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek5,
+                        seek6,
+                        seek7,
+                        seek8
+                    )
+                )
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -100,19 +98,18 @@ class cmyk_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-                seek5.progress = 100 - seek1.progress
-                seek6.progress = 100 - seek2.progress
-                seek7.progress = 100 - seek3.progress
-                seek8.progress = 100 - seek4.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
 
-                val black2: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek5, seek6, seek7, seek8, seek1, seek2, seek3, seek4))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek5,
+                        seek6,
+                        seek7,
+                        seek8
+                    )
+                )
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -132,19 +129,18 @@ class cmyk_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
-                val black: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
-                seek5.progress = 100 - seek1.progress
-                seek6.progress = 100 - seek2.progress
-                seek7.progress = 100 - seek3.progress
-                seek8.progress = 100 - seek4.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
 
-                val black2: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek5, seek6, seek7, seek8, seek1, seek2, seek3, seek4))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek5,
+                        seek6,
+                        seek7,
+                        seek8
+                    )
+                )
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -163,19 +159,18 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
-                seek1.progress = 100 - seek5.progress
-                seek2.progress = 100 - seek6.progress
-                seek3.progress = 100 - seek7.progress
-                seek4.progress = 100 - seek8.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
 
-                val black2: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6, seek7, seek8))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek1,
+                        seek2,
+                        seek3,
+                        seek4
+                    )
+                )
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -194,19 +189,18 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
-                seek1.progress = 100 - seek5.progress
-                seek2.progress = 100 - seek6.progress
-                seek3.progress = 100 - seek7.progress
-                seek4.progress = 100 - seek8.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
 
-                val black2: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6, seek7, seek8))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek1,
+                        seek2,
+                        seek3,
+                        seek4
+                    )
+                )
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -225,19 +219,18 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
-                seek1.progress = 100 - seek5.progress
-                seek2.progress = 100 - seek6.progress
-                seek3.progress = 100 - seek7.progress
-                seek4.progress = 100 - seek8.progress
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
 
-                val black2: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black2).toInt()
+                updateSeekBarValues(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6, seek7, seek8))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek1,
+                        seek2,
+                        seek3,
+                        seek4
+                    )
+                )
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -256,19 +249,19 @@ class cmyk_add_sub : Fragment() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                val black: Float = (1 - (seek8.progress.toFloat() / 100))
-                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
-                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
-                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
-                seek1.progress = 100 - seek5.progress
-                seek2.progress = 100 - seek6.progress
-                seek3.progress = 100 - seek7.progress
-                seek4.progress = 100 - seek8.progress
 
-                val black2: Float = (1 - (seek4.progress.toFloat() / 100))
-                val red2: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black2).toInt()
-                val green2: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black2).toInt()
-                val blue2: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black2).toInt()
+                val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek5, seek6, seek7, seek8))
+
+                updateSeekBarValues(arrayOf(seek1, seek2, seek3, seek4, seek5, seek6, seek7, seek8))
+
+                val (red2, green2, blue2) = convertCMYKValuesToRGB(
+                    arrayOf(
+                        seek1,
+                        seek2,
+                        seek3,
+                        seek4
+                    )
+                )
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
@@ -280,7 +273,25 @@ class cmyk_add_sub : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
+
         return view
+    }
+
+    fun convertCMYKValuesToRGB(seekBars: Array<SeekBar>): Triple<Int, Int, Int> {
+
+        val black: Float = (1 - (seekBars[3].progress.toFloat() / 100))
+        val red: Int = (255 * (1 - (seekBars[0].progress.toFloat() / 100)) * black).toInt()
+        val green: Int = (255 * (1 - (seekBars[1].progress.toFloat() / 100)) * black).toInt()
+        val blue: Int = (255 * (1 - (seekBars[2].progress.toFloat() / 100)) * black).toInt()
+
+        return Triple(red, green, blue)
+    }
+
+    fun updateSeekBarValues(seekbars: Array<SeekBar>) {
+        seekbars[0].progress = 100 - seekbars[4].progress
+        seekbars[1].progress = 100 - seekbars[5].progress
+        seekbars[2].progress = 100 - seekbars[6].progress
+        seekbars[3].progress = 100 - seekbars[7].progress
     }
 
 
