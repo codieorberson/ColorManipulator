@@ -11,8 +11,6 @@
 </TableRow>
 
     <TableRow>
-        <TextView
-            android:id="@+id/text_view"/>
 
         <View android:id="@+id/cmykbox1"
             android:layout_width="0dp"
@@ -36,7 +34,7 @@
 
         <TextView
             android:layout_width="0dp"
-            android:text="   C"
+            android:text="  C"
             android:textColor="#00FFFF"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar1"
@@ -60,8 +58,7 @@
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
@@ -92,15 +89,14 @@
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
 
         <TextView
             android:layout_width="0dp"
-            android:text="   Y"
+            android:text="  Y"
             android:textColor="#ffff00"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar3"
@@ -124,15 +120,14 @@
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
 
         <TextView
             android:layout_width="0dp"
-            android:text="   K"
+            android:text="  K"
             android:textColor="#000000"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar4"
