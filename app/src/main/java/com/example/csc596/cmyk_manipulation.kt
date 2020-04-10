@@ -1,7 +1,7 @@
 package com.example.csc596
 
 import android.graphics.Color
-import android.graphics.Color.rgb
+import android.graphics.Color.*
 import android.graphics.ColorSpace
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_cmyk_manipulation.*
-
 
 
 class cmyk_manipulation : Fragment() {
@@ -36,11 +36,17 @@ class cmyk_manipulation : Fragment() {
 
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
-                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
-            }
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
 
+                val black: Float = (1 - (seek4.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+                box1.setBackgroundColor(rgb(red, green, blue))
+            }
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
             override fun onStopTrackingTouch(seek: SeekBar) {
@@ -49,23 +55,36 @@ class cmyk_manipulation : Fragment() {
 
         seek2?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
-                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek4.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+                box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
             override fun onStopTrackingTouch(seek: SeekBar) {
-                // write custom code for progress is stopped
             }
         })
 
         seek3?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
-                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+
+                val black: Float = (1 - (seek4.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+
+                box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -76,9 +95,16 @@ class cmyk_manipulation : Fragment() {
 
         seek4?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
-                box1.setBackgroundColor(rgb(255 * (1 - seek1.progress/100) * (1 - seek4.progress/100), 255 * (1 - seek2.progress/100) * ( 1 - seek4.progress/100), 255 * (1- seek3.progress/100) * (1 - seek4.progress/100)))
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek4.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek1.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek2.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek3.progress.toFloat() / 100)) * black).toInt()
+
+                box1.setBackgroundColor(rgb(red, green, blue))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -86,6 +112,84 @@ class cmyk_manipulation : Fragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
+
+        seek5?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek8.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                box2.setBackgroundColor(rgb(red, green, blue))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
+        seek6?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek8.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                box2.setBackgroundColor(rgb(red, green, blue))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
+        seek7?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek8.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                box2.setBackgroundColor(rgb(red, green, blue))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
+        seek8?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                val black: Float = (1 - (seek8.progress.toFloat() / 100))
+                val red: Int = (255 * (1 - (seek5.progress.toFloat() / 100)) * black).toInt()
+                val green: Int = (255 * (1 - (seek6.progress.toFloat() / 100)) * black).toInt()
+                val blue: Int = (255 * (1 - (seek7.progress.toFloat() / 100)) * black).toInt()
+                box2.setBackgroundColor(rgb(red, green, blue))
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
+
         return view
     }
 
