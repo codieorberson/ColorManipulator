@@ -30,17 +30,21 @@ class rgb_add_sub : Fragment() {
 
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
                 seek4.progress = 255 - seek1.progress
                 seek5.progress = 255 - seek2.progress
                 seek6.progress = 255 - seek3.progress
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
                 //do nothing
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
             }
@@ -48,17 +52,21 @@ class rgb_add_sub : Fragment() {
 
         seek2?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
                 seek4.progress = 255 - seek1.progress
                 seek5.progress = 255 - seek2.progress
                 seek6.progress = 255 - seek3.progress
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
                 //do nothing
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
             }
@@ -66,17 +74,21 @@ class rgb_add_sub : Fragment() {
 
         seek3?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
                 seek4.progress = 255 - seek1.progress
                 seek5.progress = 255 - seek2.progress
                 seek6.progress = 255 - seek3.progress
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
                 //do nothing
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
             }
@@ -84,17 +96,21 @@ class rgb_add_sub : Fragment() {
 
         seek4?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
                 seek1.progress = 255 - seek4.progress
                 seek2.progress = 255 - seek5.progress
                 seek3.progress = 255 - seek6.progress
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
                 //do nothing
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
             }
@@ -102,25 +118,31 @@ class rgb_add_sub : Fragment() {
 
         seek5?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
                 seek1.progress = 255 - seek4.progress
                 seek2.progress = 255 - seek5.progress
                 seek3.progress = 255 - seek6.progress
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
             }
+
             override fun onStartTrackingTouch(seek: SeekBar) {
                 //do nothing
             }
+
             override fun onStopTrackingTouch(seek: SeekBar) {
                 // write custom code for progress is stopped
             }
         })
         seek6?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seek: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
                 seek1.progress = 255 - seek4.progress
                 seek2.progress = 255 - seek5.progress
