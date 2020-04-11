@@ -11,6 +11,7 @@
 </TableRow>
 
     <TableRow>
+
         <View android:id="@+id/cmykbox1"
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -33,32 +34,31 @@
 
         <TextView
             android:layout_width="0dp"
-            android:text="   C"
-            android:textColor="#0FF"/>
+            android:text="  C"
+            android:textColor="#00FFFF"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#0FF"
-            android:thumbTint="#0FF"
+            android:progressTint="#00FFFF"
+            android:thumbTint="#00FFFF"
             android:progress="100"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:text="C"
-            android:textColor="#0FF" />
+            android:textColor="#00FFFF" />
         <SeekBar
             android:id="@+id/cmyk_as_seekBar5"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#0FF"
-            android:thumbTint="#0FF"
+            android:progressTint="#00FFFF"
+            android:thumbTint="#00FFFF"
             android:progress="100"/>
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
@@ -66,89 +66,87 @@
         <TextView
             android:layout_width="0dp"
             android:text="  M"
-            android:textColor="#ebb0d7"/>
+            android:textColor="#FF00FF"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar2"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#ebb0d7"
-            android:thumbTint="#ebb0d7"
+            android:progressTint="#FF00FF"
+            android:thumbTint="#FF00FF"
             android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:text="M"
-            android:textColor="#ebb0d7" />
+            android:textColor="#FF00FF" />
         <SeekBar
             android:id="@+id/cmyk_as_seekBar6"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#ebb0d7"
-            android:thumbTint="#ebb0d7"
+            android:progressTint="#FF00FF"
+            android:thumbTint="#FF00FF"
             android:progress="0"/>
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
 
         <TextView
             android:layout_width="0dp"
-            android:text="   Y"
-            android:textColor="#fff000"/>
+            android:text="  Y"
+            android:textColor="#ffff00"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar3"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#fff000"
-            android:thumbTint="#fff000"
+            android:progressTint="#ffff00"
+            android:thumbTint="#ffff00"
             android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:text="Y"
-            android:textColor="#fff000" />
+            android:textColor="#ffff00" />
         <SeekBar
             android:id="@+id/cmyk_as_seekBar7"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#fff000"
-            android:thumbTint="#fff000"
+            android:progressTint="#ffff00"
+            android:thumbTint="#ffff00"
             android:progress="0"/>
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView></TextView>
     </TableRow>
 
     <TableRow>
 
         <TextView
             android:layout_width="0dp"
-            android:text="   K"
-            android:textColor="#080808"/>
+            android:text="  K"
+            android:textColor="#000000"/>
         <SeekBar
             android:id="@+id/cmyk_as_seekBar4"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#080808"
-            android:thumbTint="#080808"
+            android:progressTint="#000000"
+            android:thumbTint="#000000"
             android:progress="0"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:text="K"
-            android:textColor="#080808" />
+            android:textColor="#000000" />
         <SeekBar
             android:id="@+id/cmyk_as_seekBar8"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:progressTint="#080808"
-            android:thumbTint="#080808"
+            android:progressTint="#000000"
+            android:thumbTint="#000000"
             android:progress="0"/>
     </TableRow>
 
