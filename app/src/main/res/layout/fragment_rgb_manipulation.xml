@@ -30,9 +30,25 @@
     </TableRow>
 
     <TableRow>
+        <TextView
+            android:id="@+id/rgbseekbartext1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#FF0800"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/rgbseekbartext4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#FF0800"
+            android:paddingStart="75px"/>
+    </TableRow>
+
+    <TableRow>
 
         <TextView
-            android:layout_width="4dp"
             android:text="  R"
             android:textColor="#FF0800"
             />
@@ -60,14 +76,25 @@
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView
+            android:id="@+id/rgbseekbartext2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="255"
+            android:textColor="#00ff00"
+            android:paddingStart="472px"/>
+        <TextView
+            android:id="@+id/rgbseekbartext5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="255"
+            android:textColor="#00ff00"
+            android:paddingStart="468px"/>
     </TableRow>
 
     <TableRow>
 
         <TextView
-            android:layout_width="0dp"
             android:text="  G"
             android:textColor="#00ff00" />
         <SeekBar
@@ -94,14 +121,25 @@
     </TableRow>
 
     <TableRow>
-        <TextView>
-        </TextView>
+        <TextView
+            android:id="@+id/rgbseekbartext3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="255"
+            android:textColor="#0083ff"
+            android:paddingStart="472px"/>
+        <TextView
+            android:id="@+id/rgbseekbartext6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="255"
+            android:textColor="#0083ff"
+            android:paddingStart="468px"/>
     </TableRow>
 
     <TableRow>
 
         <TextView
-            android:layout_width="0dp"
             android:text="  B"
             android:textColor="#0083ff" />
         <SeekBar
