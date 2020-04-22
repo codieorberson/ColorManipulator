@@ -35,6 +35,9 @@ class rgb_add_sub : Fragment() {
         val box1 = view.findViewById<View>(R.id.rgb_addorsub_box1)
         val box2 = view.findViewById<View>(R.id.rgb_addorsub_box2)
 
+        val hexcode1 = view.findViewById<TextView>(R.id.rgbaddsubhexcode1)
+        val hexcode2 = view.findViewById<TextView>(R.id.rgbaddsubhexcode2)
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -60,6 +63,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText1.text = seek1.progress.toString()
                 seekText4.text = seek4.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -95,6 +101,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText2.text = seek2.progress.toString()
                 seekText5.text = seek5.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -130,6 +139,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText3.text = seek3.progress.toString()
                 seekText6.text = seek6.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -165,6 +177,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText4.text = seek4.progress.toString()
                 seekText1.text = seek1.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -200,6 +215,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText5.text = seek5.progress.toString()
                 seekText2.text = seek2.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -234,6 +252,9 @@ class rgb_add_sub : Fragment() {
                 }
                 seekText6.text = seek6.progress.toString()
                 seekText3.text = seek3.progress.toString()
+
+                update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
+                update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -252,6 +273,20 @@ class rgb_add_sub : Fragment() {
         seekBars[0].progress = 255 - seekBars[3].progress
         seekBars[1].progress = 255 - seekBars[4].progress
         seekBars[2].progress = 255 - seekBars[5].progress
+    }
+
+    fun update_hexcode(hexcode: TextView, seekBars: Array<SeekBar>) {
+        var hexcodevalue = "#"
+        for(i in seekBars){
+            if(i.progress.toString().length == 1){
+                hexcodevalue += "0"
+                hexcodevalue += (i.progress.toString(16))
+            }
+            else{
+                hexcodevalue += (i.progress.toString(16))
+            }
+        }
+        hexcode.text = hexcodevalue
     }
 
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_cmyk_add_sub.*
 
 class cmyk_add_sub : Fragment() {
@@ -29,6 +30,9 @@ class cmyk_add_sub : Fragment() {
         val box1 = view.findViewById<View>(R.id.cmyk_addorsub_box1)
         val box2 = view.findViewById<View>(R.id.cmyk_addorsub_box2)
 
+        val hexcode1 = view.findViewById<TextView>(R.id.cmykaddsubhexcode1)
+        val hexcode2 = view.findViewById<TextView>(R.id.cmykaddsubhexcode2)
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -50,6 +54,8 @@ class cmyk_add_sub : Fragment() {
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode1, arrayOf(red, green, blue))
+                update_hexcode(hexcode2, arrayOf(red2, green2, blue2))
 
             }
 
@@ -81,6 +87,8 @@ class cmyk_add_sub : Fragment() {
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode1, arrayOf(red, green, blue))
+                update_hexcode(hexcode2, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -113,6 +121,8 @@ class cmyk_add_sub : Fragment() {
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode1, arrayOf(red, green, blue))
+                update_hexcode(hexcode2, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -144,6 +154,8 @@ class cmyk_add_sub : Fragment() {
 
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode1, arrayOf(red, green, blue))
+                update_hexcode(hexcode2, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -174,6 +186,8 @@ class cmyk_add_sub : Fragment() {
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode2, arrayOf(red, green, blue))
+                update_hexcode(hexcode1, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -204,6 +218,8 @@ class cmyk_add_sub : Fragment() {
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode2, arrayOf(red, green, blue))
+                update_hexcode(hexcode1, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -234,6 +250,8 @@ class cmyk_add_sub : Fragment() {
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode2, arrayOf(red, green, blue))
+                update_hexcode(hexcode1, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -265,6 +283,8 @@ class cmyk_add_sub : Fragment() {
 
                 box2.setBackgroundColor(Color.rgb(red, green, blue))
                 box1.setBackgroundColor(Color.rgb(red2, green2, blue2))
+                update_hexcode(hexcode2, arrayOf(red, green, blue))
+                update_hexcode(hexcode1, arrayOf(red2, green2, blue2))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
@@ -292,6 +312,20 @@ class cmyk_add_sub : Fragment() {
         seekbars[1].progress = 100 - seekbars[5].progress
         seekbars[2].progress = 100 - seekbars[6].progress
         seekbars[3].progress = 100 - seekbars[7].progress
+    }
+
+    fun update_hexcode(hexcode: TextView, colors: Array<Int>) {
+        var hexcodevalue = "#"
+        for(i in colors){
+            if(i.toString().length == 1){
+                hexcodevalue += "0"
+                hexcodevalue += (i.toString(16))
+            }
+            else{
+                hexcodevalue += (i.toString(16))
+            }
+        }
+        hexcode.text = hexcodevalue
     }
 
 
