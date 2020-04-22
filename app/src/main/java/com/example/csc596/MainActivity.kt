@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
         val adapter = MyViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(welcome_screen(), title = " Home ")
         adapter.addFragment(rgb_manipulation(), title = " RGB Manip ")
         adapter.addFragment(cmyk_manipulation(), title = " CMYK Manip ")
         adapter.addFragment(rgb_add_sub(), title = " RGB Add/Sub ")
