@@ -171,5 +171,25 @@
             android:thumbTint="#080808" />
     </TableRow>
 
+    <TableRow>
+
+        <TextView
+            android:id="@+id/cmykaddsubhexcode1"
+            android:text="#BA4ABA"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:id="@+id/cmykaddsubhexcode2"
+            android:text="#002900"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            />
+    </TableRow>
+
 </TableLayout>
 
