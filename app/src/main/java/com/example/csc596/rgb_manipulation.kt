@@ -181,7 +181,7 @@ class rgb_manipulation : Fragment() {
                     seekText6.setPadding(((1.561 * seek6.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
 
 
-                seekText6.text = seek1.progress.toString()
+                seekText6.text = seek6.progress.toString()
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
                 update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }

@@ -35,16 +35,16 @@
             android:id="@+id/rgbseekbaraddsubtext1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="187"
             android:textColor="#FF0800"
-            android:paddingStart="88px"/>
+            android:paddingStart="366px"/>
         <TextView
             android:id="@+id/rgbseekbaraddsubtext4"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="68"
             android:textColor="#FF0800"
-            android:paddingStart="75px"/>
+            android:paddingStart="180px"/>
     </TableRow>
 
     <TableRow>
@@ -81,16 +81,16 @@
             android:id="@+id/rgbseekbaraddsubtext2"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="34"
             android:textColor="#00ff00"
-            android:paddingStart="88px"/>
+            android:paddingStart="137px"/>
         <TextView
             android:id="@+id/rgbseekbaraddsubtext5"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="221"
             android:textColor="#00ff00"
-            android:paddingStart="75px"/>
+            android:paddingStart="419px"/>
     </TableRow>
 
     <TableRow>
@@ -127,16 +127,16 @@
             android:id="@+id/rgbseekbaraddsubtext3"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="187"
             android:textColor="#0083ff"
-            android:paddingStart="88px"/>
+            android:paddingStart="366px"/>
         <TextView
             android:id="@+id/rgbseekbaraddsubtext6"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="68"
             android:textColor="#0083ff"
-            android:paddingStart="75px"/>
+            android:paddingStart="174px"/>
     </TableRow>
 
     <TableRow>
@@ -172,7 +172,7 @@
 
         <TextView
             android:id="@+id/rgbaddsubhexcode1"
-            android:text="#00FFFF"
+            android:text="#bb22bb"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -180,7 +180,7 @@
             />
         <TextView
             android:id="@+id/rgbaddsubhexcode2"
-            android:text="#00FFFF"
+            android:text="#44dd44"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"
