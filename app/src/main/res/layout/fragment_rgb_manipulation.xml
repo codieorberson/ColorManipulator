@@ -169,7 +169,7 @@
 
         <TextView
             android:id="@+id/rgbhexcode1"
-            android:text="#00FFFF"
+            android:text="#00ffff"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -177,7 +177,7 @@
             />
         <TextView
             android:id="@+id/rgbhexcode2"
-            android:text="#00FFFF"
+            android:text="#00ffff"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"

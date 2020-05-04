@@ -89,11 +89,11 @@ class rgb_add_sub : Fragment() {
 
                 if(seek2.progress < 10) {
                     seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 88)).toInt(), 0, 0, 0)
-                    seekText5.setPadding(((1.505 * seek4.progress.toFloat() + 88)).toInt(), 0, 0, 0)
+                    seekText5.setPadding(((1.505 * seek5.progress.toFloat() + 88)).toInt(), 0, 0, 0)
                 }
                 else if(seek2.progress < 100) {
                     seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 86)).toInt(), 0, 0, 0)
-                    seekText5.setPadding(((1.505 * seek4.progress.toFloat() + 86)).toInt(), 0, 0, 0)
+                    seekText5.setPadding(((1.505 * seek5.progress.toFloat() + 86)).toInt(), 0, 0, 0)
                 }
                 else {
                     seekText2.setPadding(((1.561 * seek2.progress.toFloat() + 73.87)).toInt(), 0, 0, 0)
@@ -165,15 +165,15 @@ class rgb_add_sub : Fragment() {
 
                 if(seek4.progress < 10) {
                     seekText4.setPadding(((1.505 * seek4.progress.toFloat() + 75)).toInt(), 0, 0, 0)
-                    seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 75)).toInt(), 0, 0, 0)
+                    seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 90)).toInt(), 0, 0, 0)
                 }
                 else if(seek4.progress < 100) {
                     seekText4.setPadding(((1.505 * seek4.progress.toFloat() + 70)).toInt(), 0, 0, 0)
-                    seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 70)).toInt(), 0, 0, 0)
+                    seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 85)).toInt(), 0, 0, 0)
                 }
                 else {
                     seekText4.setPadding(((1.561 * seek4.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
-                    seekText1.setPadding(((1.561 * seek1.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
+                    seekText1.setPadding(((1.561 * seek1.progress.toFloat() + 79.87)).toInt(), 0, 0, 0)
                 }
                 seekText4.text = seek4.progress.toString()
                 seekText1.text = seek1.progress.toString()
@@ -203,15 +203,15 @@ class rgb_add_sub : Fragment() {
 
                 if(seek5.progress < 10) {
                     seekText5.setPadding(((1.505 * seek5.progress.toFloat() + 75)).toInt(), 0, 0, 0)
-                    seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 75)).toInt(), 0, 0, 0)
+                    seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 90)).toInt(), 0, 0, 0)
                 }
                 else if(seek5.progress < 100) {
                     seekText5.setPadding(((1.505 * seek5.progress.toFloat() + 70)).toInt(), 0, 0, 0)
-                    seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 70)).toInt(), 0, 0, 0)
+                    seekText2.setPadding(((1.505 * seek2.progress.toFloat() + 85)).toInt(), 0, 0, 0)
                 }
                 else {
                     seekText5.setPadding(((1.561 * seek5.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
-                    seekText2.setPadding(((1.561 * seek2.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
+                    seekText2.setPadding(((1.561 * seek2.progress.toFloat() + 79.87)).toInt(), 0, 0, 0)
                 }
                 seekText5.text = seek5.progress.toString()
                 seekText2.text = seek2.progress.toString()
@@ -240,15 +240,15 @@ class rgb_add_sub : Fragment() {
 
                 if(seek6.progress < 10) {
                     seekText6.setPadding(((1.505 * seek6.progress.toFloat() + 75)).toInt(), 0, 0, 0)
-                    seekText3.setPadding(((1.505 * seek3.progress.toFloat() + 75)).toInt(), 0, 0, 0)
+                    seekText3.setPadding(((1.505 * seek3.progress.toFloat() + 90)).toInt(), 0, 0, 0)
                 }
                 else if(seek6.progress < 100) {
                     seekText6.setPadding(((1.505 * seek6.progress.toFloat() + 70)).toInt(), 0, 0, 0)
-                    seekText3.setPadding(((1.505 * seek3.progress.toFloat() + 70)).toInt(), 0, 0, 0)
+                    seekText3.setPadding(((1.505 * seek3.progress.toFloat() + 85)).toInt(), 0, 0, 0)
                 }
                 else {
                     seekText6.setPadding(((1.561 * seek6.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
-                    seekText3.setPadding(((1.561 * seek3.progress.toFloat() + 64.87)).toInt(), 0, 0, 0)
+                    seekText3.setPadding(((1.561 * seek3.progress.toFloat() + 79.87)).toInt(), 0, 0, 0)
                 }
                 seekText6.text = seek6.progress.toString()
                 seekText3.text = seek3.progress.toString()

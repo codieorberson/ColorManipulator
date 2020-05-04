@@ -33,6 +33,22 @@
     </TableRow>
 
     <TableRow>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#00FFFF"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="#00FFFF"
+            android:paddingStart="468px"/>
+    </TableRow>
+    <TableRow>
 
         <TextView
             android:layout_width="0dp"
@@ -64,8 +80,20 @@
     </TableRow>
 
     <TableRow>
-
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="60"
+            android:textColor="#ebb0d7"
+            android:paddingStart="318px"/>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="40"
+            android:textColor="#ebb0d7"
+            android:paddingStart="233px"/>
     </TableRow>
 
     <TableRow>
@@ -100,8 +128,20 @@
     </TableRow>
 
     <TableRow>
-
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#fff000"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="#fff000"
+            android:paddingStart="468px"/>
     </TableRow>
 
     <TableRow>
@@ -136,8 +176,20 @@
     </TableRow>
 
     <TableRow>
-
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="27"
+            android:textColor="#080808"
+            android:paddingStart="190px"/>
+        <TextView
+            android:id="@+id/cmykseekbaraddsubtext8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="73"
+            android:textColor="#080808"
+            android:paddingStart="359px"/>
     </TableRow>
 
     <TableRow>
@@ -175,7 +227,7 @@
 
         <TextView
             android:id="@+id/cmykaddsubhexcode1"
-            android:text="#BA4ABA"
+            android:text="#ba4aba"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_weight="1"

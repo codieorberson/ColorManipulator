@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity(){
         adapter.addFragment(welcome_screen(), title = " Home ")
         adapter.addFragment(rgb_manipulation(), title = " RGB Manip ")
         adapter.addFragment(cmyk_manipulation(), title = " CMYK Manip ")
-        adapter.addFragment(rgb_add_sub(), title = " RGB Add/Sub ")
-        adapter.addFragment(cmyk_add_sub(), title = " CMYK Add/Sub ")
+        adapter.addFragment(rgb_add_sub(), title = " RGB Comp ")
+        adapter.addFragment(cmyk_add_sub(), title = " CMYK Comp ")
         view_pager.adapter = adapter
         tabs.setupWithViewPager(view_pager)
     }

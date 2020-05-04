@@ -31,6 +31,22 @@
     </TableRow>
 
     <TableRow>
+        <TextView
+            android:id="@+id/cmykseekbartext1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="#00FFFF"
+            android:paddingStart="472px"/>
+        <TextView
+            android:id="@+id/cmykseekbartext5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="#00FFFF"
+            android:paddingStart="468px"/>
+    </TableRow>
+    <TableRow>
 
         <TextView
             android:layout_width="0dp"
@@ -58,9 +74,21 @@
     </TableRow>
 
     <TableRow>
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbartext2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#FF00FF"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/cmykseekbartext6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#FF00FF"
+            android:paddingStart="75px"/>
     </TableRow>
-
     <TableRow>
 
         <TextView
@@ -89,9 +117,21 @@
     </TableRow>
 
     <TableRow>
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbartext3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#ffff00"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/cmykseekbartext7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#ffff00"
+            android:paddingStart="75px"/>
     </TableRow>
-
     <TableRow>
 
         <TextView
@@ -120,7 +160,20 @@
     </TableRow>
 
     <TableRow>
-        <TextView></TextView>
+        <TextView
+            android:id="@+id/cmykseekbartext4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#000000"
+            android:paddingStart="88px"/>
+        <TextView
+            android:id="@+id/cmykseekbartext8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#000000"
+            android:paddingStart="75px"/>
     </TableRow>
 
     <TableRow>
