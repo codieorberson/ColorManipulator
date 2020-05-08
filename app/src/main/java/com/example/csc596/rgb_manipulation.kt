@@ -22,6 +22,7 @@ class rgb_manipulation : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //Creates objects used on page
 
         val view: View = inflater.inflate(R.layout.fragment_rgb_manipulation, container, false)
 
@@ -45,10 +46,16 @@ class rgb_manipulation : Fragment() {
         val hexcode1 = view.findViewById<TextView>(R.id.rgbhexcode1)
         val hexcode2 = view.findViewById<TextView>(R.id.rgbhexcode2)
 
+
+        //All of the comments added to seekbar 1 apply to other seekbars!!
+
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
+
+                //Makes sure label next to seekbar displays the correct numbers and doesn't go past boundaries
                 if(seek1.progress < 10)
                     seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 88)).toInt(), 0, 0, 0)
                 else if(seek1.progress < 100)
@@ -56,15 +63,16 @@ class rgb_manipulation : Fragment() {
                 else
                     seekText1.setPadding(((1.561 * seek1.progress.toFloat() + 73.87)).toInt(), 0, 0, 0)
 
+                //Updates slider text, box color, and hexcode as slider is manipulated
                 seekText1.text = seek1.progress.toString()
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
                 update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
             }
             override fun onStartTrackingTouch(seek: SeekBar) {
-                //do nothing
+                //Allows user to touch and manipulate slider
             }
             override fun onStopTrackingTouch(seek: SeekBar) {
-                // write custom code for progress is stopped
+                //Stops manipulating slider when no touch
             }
         })
 
@@ -198,6 +206,8 @@ class rgb_manipulation : Fragment() {
     }
 
     fun update_hexcode(hexcode: TextView, seekBars: Array<SeekBar>) {
+        //Changes RGB value to correct hexcode
+
         var hexcodevalue = "#"
         for(i in seekBars){
             if(i.progress.toString().length == 1){

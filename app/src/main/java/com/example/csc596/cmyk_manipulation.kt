@@ -19,6 +19,7 @@ class cmyk_manipulation : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //Creates objects used on page
 
         val view: View = inflater.inflate(R.layout.fragment_cmyk_manipulation, container, false)
 
@@ -46,6 +47,10 @@ class cmyk_manipulation : Fragment() {
         val hexcode1 = view.findViewById<TextView>(R.id.cmykhexcode1)
         val hexcode2 = view.findViewById<TextView>(R.id.cmykhexcode2)
 
+
+        //All of the comments added to seekbar 1 apply to other seekbars!!
+
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -53,11 +58,17 @@ class cmyk_manipulation : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
+                //takes RGB values from slider and converts them to a CMYK format
+
                 val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
+
+                //Changes color inside boxes based on slider movement
                 box1.setBackgroundColor(rgb(red, green, blue))
+
+                //Updates hexcode based on slider movement
                 update_hexcode(hexcode1, arrayOf(red, green, blue))
 
-
+                //Makes sure label next to seekbar displays the correct numbers and doesn't go past boundaries
                 if(seek1.progress < 50 || seek1.progress == 100) {
                     seekText1.setPadding(((3.84 * seek1.progress.toFloat() + 88)).toInt(), 0, 0, 0)
                 }
@@ -69,9 +80,12 @@ class cmyk_manipulation : Fragment() {
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
+                //Allows user to touch and manipulate slider
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
+                //Stops manipulating slider when no touch
+
             }
         })
 
@@ -269,7 +283,7 @@ class cmyk_manipulation : Fragment() {
     }
 
     fun convertCMYKValuesToRGB(seekBars: Array<SeekBar>): Triple<Int, Int, Int> {
-
+        //Formulas used to convert the R,G,B values convert correctly to C,M,Y,K
         val black: Float = (1 - (seekBars[3].progress.toFloat() / 100))
         val red: Int = (255 * (1 - (seekBars[0].progress.toFloat() / 100)) * black).toInt()
         val green: Int = (255 * (1 - (seekBars[1].progress.toFloat() / 100)) * black).toInt()
@@ -280,6 +294,8 @@ class cmyk_manipulation : Fragment() {
 
 
     fun update_hexcode(hexcode: TextView, colors: Array<Int>) {
+        //Changes CMYK value to correct hexcode
+
         var hexcodevalue = "#"
         for(i in colors){
             if(i.toString().length == 1){
