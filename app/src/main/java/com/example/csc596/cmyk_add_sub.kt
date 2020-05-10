@@ -16,6 +16,7 @@ class cmyk_add_sub : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //Creates objects used on page
         val view: View = inflater.inflate(R.layout.fragment_cmyk_add_sub, container, false)
 
         val seek1 = view.findViewById<SeekBar>(R.id.cmyk_addorsub_as_seekBar1)
@@ -42,12 +43,17 @@ class cmyk_add_sub : Fragment() {
         val hexcode1 = view.findViewById<TextView>(R.id.cmykaddsubhexcode1)
         val hexcode2 = view.findViewById<TextView>(R.id.cmykaddsubhexcode2)
 
+
+        //All of the comments added to seekbar 1 apply to other seekbars!!
+
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
+                //takes RGB values from slider and converts them to a CMYK format
                 val (red, green, blue) = convertCMYKValuesToRGB(arrayOf(seek1, seek2, seek3, seek4))
 
                 updateSeekBarValues(arrayOf(seek5, seek6, seek7, seek8, seek1, seek2, seek3, seek4))
@@ -61,11 +67,16 @@ class cmyk_add_sub : Fragment() {
                     )
                 )
 
+                //Changes color inside boxes based on slider movement
                 box1.setBackgroundColor(Color.rgb(red, green, blue))
                 box2.setBackgroundColor(Color.rgb(red2, green2, blue2))
+
+                //Updates hexcode based on slider movement
                 update_hexcode(hexcode1, arrayOf(red, green, blue))
                 update_hexcode(hexcode2, arrayOf(red2, green2, blue2))
 
+
+                //Makes sure label next to seekbar displays the correct numbers and doesn't go past boundaries
                 if(seek1.progress < 50 || seek1.progress == 100) {
                     seekText1.setPadding(((3.84 * seek1.progress.toFloat() + 88)).toInt(), 0, 0, 0)
                     seekText5.setPadding(((3.84 * seek5.progress.toFloat() + 79)).toInt(), 0, 0, 0)
@@ -80,9 +91,11 @@ class cmyk_add_sub : Fragment() {
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
+                //Allows user to touch and manipulate slider
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
+                //Stops manipulating slider when no touch
             }
         })
 
@@ -395,7 +408,7 @@ class cmyk_add_sub : Fragment() {
     }
 
     fun convertCMYKValuesToRGB(seekBars: Array<SeekBar>): Triple<Int, Int, Int> {
-
+        //Formulas used to convert the R,G,B values convert correctly to C,M,Y,K
         val black: Float = (1 - (seekBars[3].progress.toFloat() / 100))
         val red: Int = (255 * (1 - (seekBars[0].progress.toFloat() / 100)) * black).toInt()
         val green: Int = (255 * (1 - (seekBars[1].progress.toFloat() / 100)) * black).toInt()
@@ -405,13 +418,16 @@ class cmyk_add_sub : Fragment() {
     }
 
     fun updateSeekBarValues(seekbars: Array<SeekBar>) {
+       //Updates text to correctly display slider position
         seekbars[0].progress = 100 - seekbars[4].progress
         seekbars[1].progress = 100 - seekbars[5].progress
         seekbars[2].progress = 100 - seekbars[6].progress
         seekbars[3].progress = 100 - seekbars[7].progress
     }
 
+
     fun update_hexcode(hexcode: TextView, colors: Array<Int>) {
+        //Changes CMYK value to correct hexcode
         var hexcodevalue = "#"
         for(i in colors){
             if(i.toString().length == 1){

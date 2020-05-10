@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        //Creates the menu system tabs
         val adapter = MyViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(welcome_screen(), title = " Home ")
         adapter.addFragment(rgb_manipulation(), title = " RGB Manip ")
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity(){
 
     class MyViewPagerAdapter(manager:FragmentManager): FragmentPagerAdapter(manager){
 
+        //Creates all fragments
         private val fragmentList: MutableList<Fragment> = ArrayList()
         private val titleList : MutableList<String> = ArrayList()
 
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity(){
             titleList.add(title)
         }
 
+        //Creates fragment title
         override fun getPageTitle(position: Int): CharSequence? {
             return titleList[position]
         }

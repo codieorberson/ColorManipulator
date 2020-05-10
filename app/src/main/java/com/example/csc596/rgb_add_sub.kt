@@ -15,6 +15,7 @@ class rgb_add_sub : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //Creates objects used on page
 
         val view: View = inflater.inflate(R.layout.fragment_rgb_add_sub, container, false)
 
@@ -38,6 +39,10 @@ class rgb_add_sub : Fragment() {
         val hexcode1 = view.findViewById<TextView>(R.id.rgbaddsubhexcode1)
         val hexcode2 = view.findViewById<TextView>(R.id.rgbaddsubhexcode2)
 
+
+        //All of the comments added to seekbar 1 apply to other seekbars!!
+
+
         seek1?.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -45,10 +50,12 @@ class rgb_add_sub : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
 
+                //Updates boxes and seekbar text as sliders manipulated
                 box1.setBackgroundColor(Color.rgb(seek1.progress, seek2.progress, seek3.progress))
                 update_seekbars_progress(arrayOf(seek4, seek5, seek6, seek1, seek2, seek3))
                 box2.setBackgroundColor(Color.rgb(seek4.progress, seek5.progress, seek6.progress))
 
+                //Makes sure label next to seekbar displays the correct numbers and doesn't go past boundaries
                 if(seek1.progress < 10) {
                     seekText1.setPadding(((1.505 * seek1.progress.toFloat() + 88)).toInt(), 0, 0, 0)
                     seekText4.setPadding(((1.505 * seek4.progress.toFloat() + 88)).toInt(), 0, 0, 0)
@@ -64,16 +71,17 @@ class rgb_add_sub : Fragment() {
                 seekText1.text = seek1.progress.toString()
                 seekText4.text = seek4.progress.toString()
 
+                //Updates hexcode based on slider movement
                 update_hexcode(hexcode1, arrayOf(seek1, seek2, seek3))
                 update_hexcode(hexcode2, arrayOf(seek4, seek5, seek6))
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
-                //do nothing
+                //Allows user to touch and manipulate slider
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
-                // write custom code for progress is stopped
+                //Stops manipulating slider when no touch
             }
         })
 
@@ -270,12 +278,16 @@ class rgb_add_sub : Fragment() {
     }
 
     fun update_seekbars_progress(seekBars: Array<SeekBar>) {
+        //Updates text to correctly display slider position
+
         seekBars[0].progress = 255 - seekBars[3].progress
         seekBars[1].progress = 255 - seekBars[4].progress
         seekBars[2].progress = 255 - seekBars[5].progress
     }
 
     fun update_hexcode(hexcode: TextView, seekBars: Array<SeekBar>) {
+        //Changes RGB value to correct hexcode
+
         var hexcodevalue = "#"
         for(i in seekBars){
             if(i.progress.toString().length == 1){

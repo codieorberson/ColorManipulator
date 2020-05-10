@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 
 class welcome_screen : Fragment() {
 
+    //connects to MainActivity allowing the xml to be shown
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
