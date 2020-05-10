@@ -7,55 +7,41 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="81dp"
-        android:background="#FF0000"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_color"
         android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:text="Color Manipulator"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#62C162"
         android:textSize="47sp"
         android:textStyle="bold" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#00FF00"
-        android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:text="In this app, we allow users to manipulate RGB and CMYK sliders to find the perfect colors for whatever projects or purposes they may need this for. There are also pages to find the complementary color for whatever any color you choose. This is perfect for finding the most visually appealing color contrast for a great accent."
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#A10000"
         android:textSize="18sp" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#0000FF"
-        android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="140dp"
-
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:text="Some features we hope to implement:
         Smoother page menus, Adding the hexcode so users can see what colors they are making, Adding fields to enter specific hexcodes or individual color values for more precision"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#0000FF"
         android:textSize="18sp" />
+
     </LinearLayout>
 </LinearLayout>
 
